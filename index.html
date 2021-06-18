@@ -17,6 +17,11 @@
             <div class="myName">
               <li class="myName"><a href="#">Logeshwari Babu</a></li>
             </div>
+              <div class = "hamburger">
+                <span class="bar"></span>
+                <span class ="bar"></span>
+                <span class="bar"></span>
+              </div>
             <div class="topNav">
               <li class="nav_menu"><a href="#">Home</a></li>
               <li class="nav_menu"><a href="#">About</a></li>
@@ -30,5 +35,25 @@
           
         </nav>
       </header>
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".topNav");
+      
+      hamburger.addEventListener("click", mobileMenu);
+      
+      function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+      }
+
+      const navLink = document.querySelectorAll(".nav_menu");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+        </script>
 </body>
 </html>

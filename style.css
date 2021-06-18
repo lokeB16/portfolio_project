@@ -1,9 +1,9 @@
 *{
     padding: 0;
     margin: 0;
-}
+    }
 nav{
-    background: black;   
+    background: black; 
     
   }
   a {
@@ -13,8 +13,7 @@ nav{
   }
   .myName {
       font-size: 30px;
-      padding: 7.5px 10px 7.5px 7.5px;
-      
+      padding: 7.5px;      
       display: flex;
       justify-content: center;
   }
@@ -28,7 +27,7 @@ nav{
     justify-content: center;
   }
   
-  .topNav a{
+ .topNav a{
       padding: 8px;
       transition: 0.5s;
   }
@@ -39,9 +38,9 @@ nav{
   }
   .container{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
     
   }
   .topNav{
@@ -60,3 +59,42 @@ nav{
       max-width: 1020px;     
     
   }
+ @media (min-width: 768px) {.hamburger {
+    display: none;
+}
+ }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    
+  }
+
+  @media only screen and (max-width: 768px) {
+    .topNav {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: black;
+        transition: 0.3s;
+       width: 100%;
+        
+    }
+
+    .topNav.active {
+        left: 0;
+    }
+
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+}
