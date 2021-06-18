@@ -79,7 +79,7 @@ nav{
     .topNav {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 64px;
         flex-direction: column;
         background-color: black;
         transition: 0.3s;
